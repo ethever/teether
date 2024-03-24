@@ -13,7 +13,8 @@ It can
 
 1. Install `teEther`
 ```bash
-python setup.py install
+pip3 install .
+# python setup.py install
 ```
 
 2. Write your vulnerable smart contract
@@ -54,17 +55,17 @@ contract Test{
 ```
 
 3. Compile your contract
-```
+```bash
 $ solc --bin test.sol | tail -n1 > test.code
 ```
 
 4. Extract the deployed contract code
-```
+```bash
 $ python scripts/extract_contract_code.py test.code > test.contract.code
 ```
 
 5. Generate an exploit
-```
+```bash
 $ python scripts/gen_exploit.py test.contract.code 0x1234 0x1000 +1000
 
 ...
